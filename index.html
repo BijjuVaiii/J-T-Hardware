@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>J-T Hardware</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="mainbox">
+      <h1>Welcome to J-T Family..!</h1> <br>
+      <!-- <h2>Login:</h2> -->
+      <form id="loginForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+        <button type="button" onclick="authenticate()">Login</button>
+    </form>
+      <div class="note">
+        <caption>Note: Input "jt" as both username and password for futher access.</caption>
+      </div>
+    </div>
+  </div>
+  <script>
+    function authenticate() {
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
+        
+        if (username === 'jt' && password === 'jt') {
+            alert('Login successful!');
+            // Redirect to next session or page
+            window.location.href = 'homepage.html';
+        } else {
+            alert('Invalid username or password. Please try again.');
+        }
+    }
+    </script>
+</body>
+
+</html>
